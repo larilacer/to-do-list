@@ -1,0 +1,160 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tarefas:hover img{
+    opacity: 1;
+}
+
+.conteiner {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(105, 177, 171, 0.7);
+    width: 50vw;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -170px;
+
+
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+   
+}
+
+.recebe-tarefas {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.b-add-tarefa {
+    border: none;
+    border-radius: 5px;
+    background-color: #668cac;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.b-add-tarefa:hover {
+    background-color: #557a99;
+}
+
+.lista-tarefas {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.tarefas {
+    background-color: #f2f2f2;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between; /* Mantém o texto à esquerda e os ícones à direita */
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.tarefas p {
+    flex-grow: 1; /* Faz o parágrafo ocupar todo o espaço disponível */
+    margin-right: 15px; /* Dá um espaço entre o texto e os ícones */
+}
+
+.tarefas img {
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    margin-left: 10px; /* Espaço mínimo entre os ícones */
+}
+
+.tarefas:hover img {
+    opacity: 1;
+}
+
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 7%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteiner {
+        width: 90vw;
+        height: auto;
+    }
+
+    .recebe-tarefas {
+        width: 100%;
+    }
+
+    .b-add-tarefa {
+        width: 100%;
+    }
+
+}
+.done{
+    background-color: #8fac55;
+}
